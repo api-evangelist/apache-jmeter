@@ -1,90 +1,88 @@
 name: Apache JMeter
-description: 'Apache JMeter is an open source software designed to load test functional  behavior and measure performance. It was originally designed for testing Web  Applications but has since expanded to other test functions.
-
-  '
+description: >-
+  Apache JMeter is an open source software designed to load test functional behavior
+  and measure performance. It was originally designed for testing Web Applications
+  but has since expanded to other test functions.
 image: https://jmeter.apache.org/images/logo.svg
 url: https://jmeter.apache.org/
 created: '2024'
 modified: '2024'
 specificationVersion: '0.18'
 tags:
-- performance testing
-- load testing
-- stress testing
-- api testing
-- open source
+  - performance testing
+  - load testing
+  - stress testing
+  - api testing
+  - open source
 apis:
-- name: JMeter REST API
-  description: 'RESTful API for controlling and monitoring JMeter tests remotely
-
-    '
-  image: https://jmeter.apache.org/images/logo.svg
-  humanURL: https://jmeter.apache.org/
-  baseURL: http://localhost:8080/api
-  tags:
-  - testing
-  - performance
-  - rest
-  properties:
-  - type: Documentation
-    url: https://jmeter.apache.org/usermanual/remote-test.html
-  - type: OpenAPI
-    url: https://jmeter-plugins.org/wiki/HttpSimpleTableServer/
-  - type: Swagger
-    url: http://localhost:8080/api/swagger-ui.html
-  contact:
-  - FN: Apache JMeter Project
-    email: dev@jmeter.apache.org
-    url: https://jmeter.apache.org/mail.html
-- name: JMeter CLI Interface
-  description: 'Command-line interface for running JMeter tests in non-GUI mode
-
-    '
-  humanURL: https://jmeter.apache.org/usermanual/get-started.html#non_gui
-  baseURL: command-line
-  tags:
-  - cli
-  - command-line
-  - automation
-  properties:
-  - type: Documentation
-    url: https://jmeter.apache.org/usermanual/get-started.html#non_gui
-  - type: User Manual
-    url: https://jmeter.apache.org/usermanual/
-- name: JMeter Plugins Manager API
-  description: 'API for managing JMeter plugins programmatically
-
-    '
-  humanURL: https://jmeter-plugins.org/
-  baseURL: https://jmeter-plugins.org/
-  tags:
-  - plugins
-  - extensions
-  properties:
-  - type: Documentation
-    url: https://jmeter-plugins.org/wiki/PluginsManager/
-  - type: GitHub
-    url: https://github.com/undera/jmeter-plugins-manager
+  - name: JMeter REST API
+    description: >-
+      RESTful API for controlling and monitoring JMeter tests remotely.
+    image: https://jmeter.apache.org/images/logo.svg
+    humanURL: https://jmeter.apache.org/
+    baseURL: http://localhost:8080/api
+    tags:
+      - testing
+      - performance
+      - rest
+    properties:
+      - type: Documentation
+        url: https://jmeter.apache.org/usermanual/remote-test.html
+      - type: OpenAPI
+        url: https://jmeter-plugins.org/wiki/HttpSimpleTableServer/
+      - type: Swagger
+        url: http://localhost:8080/api/swagger-ui.html
+    contact:
+      - FN: Apache JMeter Project
+        email: dev@jmeter.apache.org
+        url: https://jmeter.apache.org/mail.html
+  - name: JMeter CLI Interface
+    description: >-
+      Command-line interface for running JMeter tests in non-GUI mode.
+    humanURL: https://jmeter.apache.org/usermanual/get-started.html#non_gui
+    baseURL: command-line
+    tags:
+      - cli
+      - command-line
+      - automation
+    properties:
+      - type: Documentation
+        url: https://jmeter.apache.org/usermanual/get-started.html#non_gui
+      - type: User Manual
+        url: https://jmeter.apache.org/usermanual/
+  - name: JMeter Plugins Manager API
+    description: >-
+      API for managing JMeter plugins programmatically.
+    humanURL: https://jmeter-plugins.org/
+    baseURL: https://jmeter-plugins.org/
+    tags:
+      - plugins
+      - extensions
+    properties:
+      - type: Documentation
+        url: https://jmeter-plugins.org/wiki/PluginsManager/
+      - type: GitHub
+        url: https://github.com/undera/jmeter-plugins-manager
 common:
-- type: Website
-  url: https://jmeter.apache.org/
-- type: Documentation
-  url: https://jmeter.apache.org/usermanual/
-- type: GitHub
-  url: https://github.com/apache/jmeter
-- type: Download
-  url: https://jmeter.apache.org/download_jmeter.cgi
-- type: Mailing List
-  url: https://jmeter.apache.org/mail.html
-- type: Wiki
-  url: https://cwiki.apache.org/confluence/display/JMETER/
-- type: Issue Tracker
-  url: https://jmeter.apache.org/issues.html
-- type: Blog
-  url: https://blogs.apache.org/jmeter/
-- type: License
-  url: https://www.apache.org/licenses/LICENSE-2.0
+  - type: Website
+    url: https://jmeter.apache.org/
+  - type: Documentation
+    url: https://jmeter.apache.org/usermanual/
+  - type: GitHub
+    url: https://github.com/apache/jmeter
+  - type: Download
+    url: https://jmeter.apache.org/download_jmeter.cgi
+  - type: Mailing List
+    url: https://jmeter.apache.org/mail.html
+  - type: Wiki
+    url: https://cwiki.apache.org/confluence/display/JMETER/
+  - type: Issue Tracker
+    url: https://jmeter.apache.org/issues.html
+  - type: Blog
+    url: https://blogs.apache.org/jmeter/
+  - type: License
+    url: https://www.apache.org/licenses/LICENSE-2.0
 maintainers:
-- FN: Apache JMeter Team
-  email: dev@jmeter.apache.org
-  url: https://jmeter.apache.org/
+  - FN: Apache JMeter Team
+    email: dev@jmeter.apache.org
+    url: https://jmeter.apache.org/
