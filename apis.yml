@@ -9,11 +9,11 @@ created: '2024'
 modified: '2024'
 specificationVersion: '0.18'
 tags:
-  - performance testing
-  - load testing
-  - stress testing
-  - api testing
-  - open source
+  - Api Testing
+  - Load Testing
+  - Open Source
+  - Performance Testing
+  - Stress Testing
 apis:
   - name: JMeter REST API
     description: >-
@@ -22,9 +22,9 @@ apis:
     humanURL: https://jmeter.apache.org/
     baseURL: http://localhost:8080/api
     tags:
-      - testing
-      - performance
-      - rest
+      - Performance
+      - Rest
+      - Testing
     properties:
       - type: Documentation
         url: https://jmeter.apache.org/usermanual/remote-test.html
@@ -42,9 +42,9 @@ apis:
     humanURL: https://jmeter.apache.org/usermanual/get-started.html#non_gui
     baseURL: command-line
     tags:
-      - cli
-      - command-line
-      - automation
+      - Automation
+      - Cli
+      - Command-Line
     properties:
       - type: Documentation
         url: https://jmeter.apache.org/usermanual/get-started.html#non_gui
@@ -56,8 +56,8 @@ apis:
     humanURL: https://jmeter-plugins.org/
     baseURL: https://jmeter-plugins.org/
     tags:
-      - plugins
-      - extensions
+      - Extensions
+      - Plugins
     properties:
       - type: Documentation
         url: https://jmeter-plugins.org/wiki/PluginsManager/
