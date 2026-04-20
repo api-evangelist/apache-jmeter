@@ -1,0 +1,4 @@
+{
+  "testPlan": "/tests/my-load-test.jmx",
+  "properties": {}
+}

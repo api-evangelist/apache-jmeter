@@ -1,0 +1,78 @@
+vocabulary: "1.0.0"
+
+info:
+  provider: "Apache JMeter"
+  description: "Vocabulary for Apache JMeter load testing REST API and performance testing workflows."
+  created: "2026-04-19"
+  modified: "2026-04-19"
+
+operational:
+  apis:
+    - namespace: jmeter-rest-api
+      name: Apache JMeter REST API
+      version: "5.6.3"
+      baseUrl: http://localhost:4445
+      status: active
+
+  resources:
+    - name: tests
+      description: Load test execution and management
+      apis: [jmeter-rest-api]
+      actions: [start, stop, get-status]
+    - name: results
+      description: Test performance results and metrics
+      apis: [jmeter-rest-api]
+      actions: [get]
+
+  actions:
+    - name: start
+      httpMethod: POST
+      pattern: write
+    - name: stop
+      httpMethod: POST
+      pattern: write
+    - name: get-status
+      httpMethod: GET
+      pattern: read
+    - name: get
+      httpMethod: GET
+      pattern: read
+
+capability:
+  workflows:
+    - name: Load Test Management
+      file: capabilities/load-test-management.yaml
+      toolCount: 4
+      personas:
+        - QA Engineer
+        - Performance Engineer
+
+  personas:
+    - id: qa-engineer
+      name: QA Engineer
+      description: QA engineers who run and monitor JMeter load tests
+      workflows: [Load Test Management]
+    - id: performance-engineer
+      name: Performance Engineer
+      description: Engineers who analyze performance test results and tune systems
+      workflows: [Load Test Management]
+
+  namespaces:
+    - name: jmeter-rest-api
+      type: consumed
+    - name: jmeter-load-test-api
+      type: rest-exposed
+      port: 8080
+    - name: jmeter-load-test-mcp
+      type: mcp-exposed
+      port: 9090
+
+crossReference:
+  - resource: tests
+    operations: [startTest, stopTest, getStatus]
+    workflows: [Load Test Management]
+    personas: [QA Engineer, Performance Engineer]
+  - resource: results
+    operations: [getResults]
+    workflows: [Load Test Management]
+    personas: [Performance Engineer]

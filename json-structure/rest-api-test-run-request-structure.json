@@ -1,0 +1,18 @@
+{
+  "type": "object",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-jmeter/refs/heads/main/json-structure/rest-api-test-run-request-structure.json",
+  "name": "TestRunRequest",
+  "description": "Request to start a JMeter test",
+  "properties": {
+    "testPlan": {
+      "type": "string",
+      "description": "Path to the JMeter test plan file",
+      "example": "/tests/my-load-test.jmx"
+    },
+    "properties": {
+      "type": "object",
+      "description": "JMeter properties to override"
+    }
+  }
+}

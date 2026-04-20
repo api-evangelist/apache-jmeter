@@ -1,0 +1,73 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "jmeter": "https://apache-jmeter.apache.org/schema/",
+    "schema": "https://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "TestResults": "jmeter:TestResults",
+    "TestStatus": "jmeter:TestStatus",
+    "TestRunRequest": "jmeter:TestRunRequest",
+    "TestRunResponse": "jmeter:TestRunResponse",
+    "testId": {
+      "@id": "jmeter:testId",
+      "@type": "xsd:string"
+    },
+    "totalRequests": {
+      "@id": "jmeter:totalRequests",
+      "@type": "xsd:integer"
+    },
+    "errorCount": {
+      "@id": "jmeter:errorCount",
+      "@type": "xsd:integer"
+    },
+    "averageResponseTime": {
+      "@id": "jmeter:averageResponseTime",
+      "@type": "xsd:decimal"
+    },
+    "minResponseTime": {
+      "@id": "jmeter:minResponseTime",
+      "@type": "xsd:decimal"
+    },
+    "maxResponseTime": {
+      "@id": "jmeter:maxResponseTime",
+      "@type": "xsd:decimal"
+    },
+    "percentile90": {
+      "@id": "jmeter:percentile90",
+      "@type": "xsd:decimal"
+    },
+    "throughput": {
+      "@id": "jmeter:throughput",
+      "@type": "xsd:decimal"
+    },
+    "status": {
+      "@id": "jmeter:status",
+      "@type": "xsd:string"
+    },
+    "activeThreads": {
+      "@id": "jmeter:activeThreads",
+      "@type": "xsd:integer"
+    },
+    "elapsedTime": {
+      "@id": "jmeter:elapsedTime",
+      "@type": "xsd:integer"
+    },
+    "errorRate": {
+      "@id": "jmeter:errorRate",
+      "@type": "xsd:decimal"
+    },
+    "testPlan": {
+      "@id": "jmeter:testPlan",
+      "@type": "xsd:string"
+    },
+    "properties": {
+      "@id": "jmeter:properties",
+      "@type": "@id"
+    },
+    "startTime": {
+      "@id": "jmeter:startTime",
+      "@type": "xsd:integer"
+    }
+  }
+}

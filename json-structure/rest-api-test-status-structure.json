@@ -1,0 +1,43 @@
+{
+  "type": "object",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-jmeter/refs/heads/main/json-structure/rest-api-test-status-structure.json",
+  "name": "TestStatus",
+  "description": "Current test status",
+  "properties": {
+    "testId": {
+      "type": "string",
+      "example": "test-1234"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "idle",
+        "running",
+        "stopping",
+        "stopped"
+      ],
+      "example": "running"
+    },
+    "activeThreads": {
+      "type": "integer",
+      "description": "Number of active virtual user threads",
+      "example": 100
+    },
+    "elapsedTime": {
+      "type": "integer",
+      "description": "Elapsed test time in milliseconds",
+      "example": 30000
+    },
+    "throughput": {
+      "type": "number",
+      "description": "Current throughput in requests per second",
+      "example": 150.5
+    },
+    "errorRate": {
+      "type": "number",
+      "description": "Current error rate percentage",
+      "example": 0.5
+    }
+  }
+}

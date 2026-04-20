@@ -1,0 +1,8 @@
+{
+  "testId": "test-1234",
+  "status": "running",
+  "activeThreads": 100,
+  "elapsedTime": 30000,
+  "throughput": 150.5,
+  "errorRate": 0.5
+}

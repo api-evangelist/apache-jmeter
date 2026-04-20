@@ -1,0 +1,219 @@
+openapi: 3.0.3
+info:
+  title: Apache JMeter REST API
+  description: REST API for Apache JMeter test control and monitoring. Provides endpoints for starting, stopping, and monitoring load tests remotely, and for accessing test results.
+  version: 5.6.3
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0
+  contact:
+    email: dev@jmeter.apache.org
+servers:
+- url: http://localhost:4445
+  description: JMeter REST API server
+tags:
+- name: Tests
+  description: Test execution management
+- name: Status
+  description: Test status and monitoring
+- name: Results
+  description: Test results access
+paths:
+  /run:
+    post:
+      operationId: startTest
+      summary: Apache JMeter Start Test
+      description: Start a JMeter load test with a given test plan.
+      tags: [Tests]
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TestRunRequest'
+            examples:
+              startTestRequestExample:
+                summary: Default startTest request
+                x-microcks-default: true
+                value:
+                  testPlan: /tests/my-load-test.jmx
+                  properties: {}
+      responses:
+        '200':
+          description: Test started
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TestRunResponse'
+              examples:
+                startTest200Example:
+                  summary: Default startTest 200 response
+                  x-microcks-default: true
+                  value:
+                    testId: test-1234
+                    status: running
+                    startTime: 1718153645993
+  /stop:
+    post:
+      operationId: stopTest
+      summary: Apache JMeter Stop Test
+      description: Stop the currently running JMeter test.
+      tags: [Tests]
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
+      responses:
+        '200':
+          description: Test stopped
+  /status:
+    get:
+      operationId: getStatus
+      summary: Apache JMeter Get Status
+      description: Get the current status of a running JMeter test.
+      tags: [Status]
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
+      responses:
+        '200':
+          description: Test status
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TestStatus'
+              examples:
+                getStatus200Example:
+                  summary: Default getStatus 200 response
+                  x-microcks-default: true
+                  value:
+                    testId: test-1234
+                    status: running
+                    activeThreads: 100
+                    elapsedTime: 30000
+                    throughput: 150.5
+                    errorRate: 0.5
+  /results:
+    get:
+      operationId: getResults
+      summary: Apache JMeter Get Results
+      description: Retrieve test results from the running or completed test.
+      tags: [Results]
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
+      parameters:
+      - name: since
+        in: query
+        schema:
+          type: integer
+        description: Return results since this timestamp
+        example: 1718153645993
+      responses:
+        '200':
+          description: Test results
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TestResults'
+              examples:
+                getResults200Example:
+                  summary: Default getResults 200 response
+                  x-microcks-default: true
+                  value:
+                    testId: test-1234
+                    totalRequests: 10000
+                    errorCount: 50
+                    averageResponseTime: 250.5
+                    minResponseTime: 50.0
+                    maxResponseTime: 5000.0
+                    percentile90: 500.0
+                    throughput: 148.7
+components:
+  schemas:
+    TestRunRequest:
+      type: object
+      description: Request to start a JMeter test
+      properties:
+        testPlan:
+          type: string
+          description: Path to the JMeter test plan file
+          example: /tests/my-load-test.jmx
+        properties:
+          type: object
+          description: JMeter properties to override
+    TestRunResponse:
+      type: object
+      description: Response from starting a test
+      properties:
+        testId:
+          type: string
+          description: Unique test run identifier
+          example: test-1234
+        status:
+          type: string
+          example: running
+        startTime:
+          type: integer
+          description: Test start timestamp
+          example: 1718153645993
+    TestStatus:
+      type: object
+      description: Current test status
+      properties:
+        testId:
+          type: string
+          example: test-1234
+        status:
+          type: string
+          enum: [idle, running, stopping, stopped]
+          example: running
+        activeThreads:
+          type: integer
+          description: Number of active virtual user threads
+          example: 100
+        elapsedTime:
+          type: integer
+          description: Elapsed test time in milliseconds
+          example: 30000
+        throughput:
+          type: number
+          description: Current throughput in requests per second
+          example: 150.5
+        errorRate:
+          type: number
+          description: Current error rate percentage
+          example: 0.5
+    TestResults:
+      type: object
+      description: Test performance results
+      properties:
+        testId:
+          type: string
+          example: test-1234
+        totalRequests:
+          type: integer
+          example: 10000
+        errorCount:
+          type: integer
+          example: 50
+        averageResponseTime:
+          type: number
+          description: Average response time in milliseconds
+          example: 250.5
+        minResponseTime:
+          type: number
+          example: 50.0
+        maxResponseTime:
+          type: number
+          example: 5000.0
+        percentile90:
+          type: number
+          description: 90th percentile response time
+          example: 500.0
+        throughput:
+          type: number
+          description: Average throughput in requests/second
+          example: 148.7

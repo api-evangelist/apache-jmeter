@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-jmeter/refs/heads/main/json-schema/rest-api-test-results-schema.json",
+  "title": "TestResults",
+  "description": "Test performance results",
+  "type": "object",
+  "properties": {
+    "testId": {
+      "type": "string",
+      "example": "test-1234"
+    },
+    "totalRequests": {
+      "type": "integer",
+      "example": 10000
+    },
+    "errorCount": {
+      "type": "integer",
+      "example": 50
+    },
+    "averageResponseTime": {
+      "type": "number",
+      "description": "Average response time in milliseconds",
+      "example": 250.5
+    },
+    "minResponseTime": {
+      "type": "number",
+      "example": 50.0
+    },
+    "maxResponseTime": {
+      "type": "number",
+      "example": 5000.0
+    },
+    "percentile90": {
+      "type": "number",
+      "description": "90th percentile response time",
+      "example": 500.0
+    },
+    "throughput": {
+      "type": "number",
+      "description": "Average throughput in requests/second",
+      "example": 148.7
+    }
+  }
+}

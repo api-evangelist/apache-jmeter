@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-jmeter/refs/heads/main/json-schema/rest-api-test-run-response-schema.json",
+  "title": "TestRunResponse",
+  "description": "Response from starting a test",
+  "type": "object",
+  "properties": {
+    "testId": {
+      "type": "string",
+      "description": "Unique test run identifier",
+      "example": "test-1234"
+    },
+    "status": {
+      "type": "string",
+      "example": "running"
+    },
+    "startTime": {
+      "type": "integer",
+      "description": "Test start timestamp",
+      "example": 1718153645993
+    }
+  }
+}

@@ -1,0 +1,104 @@
+naftiko: "1.0.0-alpha1"
+
+info:
+  label: "Apache JMeter REST API"
+  description: "Shared per-API capability for the JMeter REST API covering test execution control and result retrieval."
+  tags:
+    - Apache JMeter
+    - Load Testing
+    - Performance Testing
+  created: "2026-04-19"
+  modified: "2026-04-19"
+
+binds:
+  - namespace: env
+    keys:
+      JMETER_API_URL: JMETER_API_URL
+
+capability:
+  consumes:
+    - type: http
+      namespace: jmeter-rest-api
+      baseUri: http://localhost:4445
+      description: "Apache JMeter REST API"
+      resources:
+        - name: run
+          path: /run
+          description: Test execution control
+          operations:
+            - name: start-test
+              method: POST
+              description: Start a JMeter test
+              outputRawFormat: json
+              outputParameters:
+                - name: result
+                  type: object
+                  value: "$."
+        - name: status
+          path: /status
+          description: Test status monitoring
+          operations:
+            - name: get-status
+              method: GET
+              description: Get test status
+              outputRawFormat: json
+              outputParameters:
+                - name: result
+                  type: object
+                  value: "$."
+        - name: results
+          path: /results
+          description: Test results
+          operations:
+            - name: get-results
+              method: GET
+              description: Get test results
+              outputRawFormat: json
+              outputParameters:
+                - name: result
+                  type: object
+                  value: "$."
+
+  exposes:
+    - type: rest
+      port: 8100
+      namespace: jmeter-api-exposed
+      resources:
+        - path: /v1/status
+          operations:
+            - method: GET
+              name: get-status
+              call: "jmeter-rest-api.get-status"
+              outputParameters:
+                - type: object
+                  mapping: "$."
+
+    - type: mcp
+      port: 9100
+      namespace: jmeter-api-mcp
+      transport: http
+      tools:
+        - name: start-load-test
+          description: Start a JMeter load test
+          hints:
+            readOnly: false
+          call: "jmeter-rest-api.start-test"
+          outputParameters:
+            - type: object
+              mapping: "$."
+        - name: get-test-status
+          description: Get current status of a JMeter test
+          hints:
+            readOnly: true
+          call: "jmeter-rest-api.get-status"
+          outputParameters:
+            - type: object
+              mapping: "$."
+        - name: get-test-results
+          description: Retrieve load test performance results
+          hints:
+            readOnly: true
+          call: "jmeter-rest-api.get-results"
+          outputParameters:
+            - type: object
+              mapping: "$."

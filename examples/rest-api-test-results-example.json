@@ -1,0 +1,10 @@
+{
+  "testId": "test-1234",
+  "totalRequests": 10000,
+  "errorCount": 50,
+  "averageResponseTime": 250.5,
+  "minResponseTime": 50.0,
+  "maxResponseTime": 5000.0,
+  "percentile90": 500.0,
+  "throughput": 148.7
+}
