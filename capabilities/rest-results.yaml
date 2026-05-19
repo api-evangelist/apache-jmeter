@@ -1,0 +1,76 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Apache JMeter REST API — Results
+  description: 'Apache JMeter REST API — Results. 1 operations. Lead operation: Apache JMeter Get Results. Self-contained
+    Naftiko capability covering one Apache Jmeter business surface.'
+  tags:
+  - Apache Jmeter
+  - Results
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    APACHE_JMETER_API_KEY: APACHE_JMETER_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: rest-results
+    baseUri: http://localhost:4445
+    description: Apache JMeter REST API — Results business capability. Self-contained, no shared references.
+    resources:
+    - name: results
+      path: /results
+      operations:
+      - name: getresults
+        method: GET
+        description: Apache JMeter Get Results
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: since
+          in: query
+          type: integer
+          description: Return results since this timestamp
+  exposes:
+  - type: rest
+    namespace: rest-results-rest
+    port: 8080
+    description: REST adapter for Apache JMeter REST API — Results. One Spectral-compliant resource per consumed operation,
+      prefixed with /v1.
+    resources:
+    - path: /v1/results
+      name: results
+      description: REST surface for results.
+      operations:
+      - method: GET
+        name: getresults
+        description: Apache JMeter Get Results
+        call: rest-results.getresults
+        with:
+          since: rest.since
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: rest-results-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Apache JMeter REST API — Results. One tool per consumed operation, routed inline through
+      this capability's consumes block.
+    tools:
+    - name: apache-jmeter-get-results
+      description: Apache JMeter Get Results
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: rest-results.getresults
+      with:
+        since: tools.since
+      outputParameters:
+      - type: object
+        mapping: $.
