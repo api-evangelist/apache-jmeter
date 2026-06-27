@@ -33,11 +33,11 @@ apis:
     url: https://jmeter.apache.org/usermanual/remote-test.html
   - type: OpenAPI
     url: openapi/apache-jmeter-rest-api.yaml
-  - type: NaftikoCapability
+  - type: X-NaftikoCapability
     url: capabilities/rest-results.yaml
-  - type: NaftikoCapability
+  - type: X-NaftikoCapability
     url: capabilities/rest-status.yaml
-  - type: NaftikoCapability
+  - type: X-NaftikoCapability
     url: capabilities/rest-tests.yaml
 - aid: apache-jmeter:cli
   name: Apache JMeter CLI
