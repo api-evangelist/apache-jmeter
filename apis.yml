@@ -51,6 +51,10 @@ apis:
   - type: Documentation
     url: https://jmeter.apache.org/usermanual/get-started.html#non_gui
 common:
+- type: VulnerabilityDisclosure
+  url: security/apache-jmeter-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/apache-jmeter-domain-security.yml
 - type: GitHubOrganization
   url: https://github.com/apache
 - type: GitHubRepository
