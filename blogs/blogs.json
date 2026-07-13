@@ -2,11 +2,13 @@
   "repo": "apache-jmeter",
   "feeds": [
     {
-      "source": "https://blogs.apache.org/jmeter/",
+      "source": "https://www.apache.org/licenses/LICENSE-2.0",
+      "feed_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "title": "",
       "saved": 0,
-      "error": "302 redirect to https://jmeter.apache.org/blog/ which returns 404"
+      "method": "none"
     }
   ],
   "post_count": 0,
-  "fetched": "2026-06-27T12:24:09Z"
+  "fetched": "2026-07-11T11:50:51Z"
 }
