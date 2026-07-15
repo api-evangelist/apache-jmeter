@@ -51,6 +51,8 @@ apis:
   - type: Documentation
     url: https://jmeter.apache.org/usermanual/get-started.html#non_gui
 common:
+- type: AgenticAccess
+  url: agentic-access/apache-jmeter-agentic-access.yml
 - type: VulnerabilityDisclosure
   url: security/apache-jmeter-vulnerability-disclosure.yml
 - type: DomainSecurity
