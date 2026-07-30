@@ -4,9 +4,21 @@ description: Apache JMeter is an open-source Java application designed for load 
   performance. It supports web applications, REST APIs, databases, LDAP, FTP, and other protocols. Licensed under Apache 2.0
   and governed by the Apache Software Foundation.
 type: Index
+accessModel:
+  pricing: freemium
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Freemium
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
 position: Consumer
 access: 3rd-Party
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/apache-jmeter.png
 tags:
 - API Testing
 - Java
@@ -19,30 +31,11 @@ modified: '2026-05-19'
 url: https://raw.githubusercontent.com/api-evangelist/apache-jmeter/refs/heads/main/apis.yml
 specificationVersion: '0.19'
 apis:
-- aid: apache-jmeter:rest-api
-  name: Apache JMeter REST API
-  description: The JMeter REST API provides HTTP endpoints for remotely starting, stopping, and monitoring load tests, as
-    well as retrieving test results and status information.
-  humanURL: https://jmeter.apache.org/usermanual/remote-test.html
-  tags:
-  - Performance Testing
-  - REST
-  - Test Control
-  properties:
-  - type: Documentation
-    url: https://jmeter.apache.org/usermanual/remote-test.html
-  - type: OpenAPI
-    url: openapi/apache-jmeter-rest-api.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/rest-results.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/rest-status.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/rest-tests.yaml
 - aid: apache-jmeter:cli
   name: Apache JMeter CLI
-  description: JMeter command-line interface for running load tests in non-GUI mode for CI/CD integration, including options
-    for test plan execution, result reporting, and distributed testing.
+  description: >-
+    JMeter command-line interface for running load tests in non-GUI mode for CI/CD integration, including
+    options for test plan execution, result reporting, and distributed testing.
   humanURL: https://jmeter.apache.org/usermanual/get-started.html#non_gui
   tags:
   - CLI
@@ -50,6 +43,57 @@ apis:
   properties:
   - type: Documentation
     url: https://jmeter.apache.org/usermanual/get-started.html#non_gui
+- aid: apache-jmeter:apache-jmeter-results-api
+  name: Apache JMeter Results API
+  description: Test results access
+  humanURL: https://jmeter.apache.org/usermanual/remote-test.html
+  tags:
+  - Results
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-jmeter-results-api-openapi.yml
+  - type: Documentation
+    url: https://jmeter.apache.org/usermanual/remote-test.html
+  - type: X-NaftikoCapability
+    url: capabilities/rest-results.yaml
+  - type: X-NaftikoCapability
+    url: capabilities/rest-status.yaml
+  - type: X-NaftikoCapability
+    url: capabilities/rest-tests.yaml
+- aid: apache-jmeter:apache-jmeter-status-api
+  name: Apache JMeter Status API
+  description: Test status and monitoring
+  humanURL: https://jmeter.apache.org/usermanual/remote-test.html
+  tags:
+  - Status
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-jmeter-status-api-openapi.yml
+  - type: Documentation
+    url: https://jmeter.apache.org/usermanual/remote-test.html
+  - type: X-NaftikoCapability
+    url: capabilities/rest-results.yaml
+  - type: X-NaftikoCapability
+    url: capabilities/rest-status.yaml
+  - type: X-NaftikoCapability
+    url: capabilities/rest-tests.yaml
+- aid: apache-jmeter:apache-jmeter-tests-api
+  name: Apache JMeter Tests API
+  description: Test execution management
+  humanURL: https://jmeter.apache.org/usermanual/remote-test.html
+  tags:
+  - Tests
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-jmeter-tests-api-openapi.yml
+  - type: Documentation
+    url: https://jmeter.apache.org/usermanual/remote-test.html
+  - type: X-NaftikoCapability
+    url: capabilities/rest-results.yaml
+  - type: X-NaftikoCapability
+    url: capabilities/rest-status.yaml
+  - type: X-NaftikoCapability
+    url: capabilities/rest-tests.yaml
 common:
 - type: AgenticAccess
   url: agentic-access/apache-jmeter-agentic-access.yml
