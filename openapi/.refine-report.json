@@ -1,0 +1,18 @@
+{
+  "provider": "apache-jmeter",
+  "sources": [
+    "apache-jmeter-results-api-openapi.yml",
+    "apache-jmeter-status-api-openapi.yml",
+    "apache-jmeter-tests-api-openapi.yml"
+  ],
+  "outputs": [
+    "apache-jmeter-results-api-openapi.yml",
+    "apache-jmeter-status-api-openapi.yml",
+    "apache-jmeter-tests-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
