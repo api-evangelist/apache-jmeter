@@ -54,12 +54,6 @@ apis:
     url: openapi/apache-jmeter-results-api-openapi.yml
   - type: Documentation
     url: https://jmeter.apache.org/usermanual/remote-test.html
-  - type: X-NaftikoCapability
-    url: capabilities/rest-results.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/rest-status.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/rest-tests.yaml
 - aid: apache-jmeter:apache-jmeter-status-api
   name: Apache JMeter Status API
   description: Test status and monitoring
@@ -71,12 +65,6 @@ apis:
     url: openapi/apache-jmeter-status-api-openapi.yml
   - type: Documentation
     url: https://jmeter.apache.org/usermanual/remote-test.html
-  - type: X-NaftikoCapability
-    url: capabilities/rest-results.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/rest-status.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/rest-tests.yaml
 - aid: apache-jmeter:apache-jmeter-tests-api
   name: Apache JMeter Tests API
   description: Test execution management
@@ -88,13 +76,20 @@ apis:
     url: openapi/apache-jmeter-tests-api-openapi.yml
   - type: Documentation
     url: https://jmeter.apache.org/usermanual/remote-test.html
-  - type: X-NaftikoCapability
-    url: capabilities/rest-results.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/rest-status.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/rest-tests.yaml
 common:
+- type: IssueTracker
+  url: https://github.com/apache/jmeter/issues
+- type: Releases
+  url: https://github.com/apache/jmeter/releases
+- type: SecurityPolicy
+  url: https://github.com/apache/jmeter/blob/master/SECURITY.md
+- type: CodeOfConduct
+  url: https://github.com/apache/jmeter/blob/master/CODE_OF_CONDUCT.md
+- type: ContributionGuide
+  url: https://github.com/apache/jmeter/blob/master/CONTRIBUTING.md
+- type: License
+  name: Apache-2.0
+  url: https://github.com/apache/jmeter/blob/master/LICENSE
 - type: AgenticAccess
   url: agentic-access/apache-jmeter-agentic-access.yml
 - type: VulnerabilityDisclosure
