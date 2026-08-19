@@ -1,0 +1,44 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Apache JMeter REST Results Tests API",
+    "version": "5.6.3"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Tests",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Apache JMeter Start Test",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:4445/run",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Start a JMeter load test with a given test plan."
+        },
+        {
+          "info": {
+            "name": "Apache JMeter Stop Test",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:4445/stop"
+          },
+          "docs": "Stop the currently running JMeter test."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

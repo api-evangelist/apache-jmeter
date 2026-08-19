@@ -1,0 +1,114 @@
+{
+  "item": [
+    {
+      "id": "4df4af41-1683-420e-a619-f1f78e0de930",
+      "name": "Results",
+      "description": {
+        "content": "Test results access",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "0d4f83bc-2636-4c72-be11-1b864282b84c",
+          "name": "Apache JMeter Get Results",
+          "request": {
+            "name": "Apache JMeter Get Results",
+            "description": {
+              "content": "Retrieve test results from the running or completed test.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "results"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "since",
+                  "value": "<integer>",
+                  "description": "Return results since this timestamp"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "2439f708-9a95-4340-b674-06c4aa6ea742",
+              "name": "Test results",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "results"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "since",
+                      "value": "1718153645993"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"testId\": \"test-1234\",\n  \"totalRequests\": 10000,\n  \"errorCount\": 50,\n  \"averageResponseTime\": 250.5,\n  \"minResponseTime\": 50,\n  \"maxResponseTime\": 5000,\n  \"percentile90\": 500,\n  \"throughput\": 148.7\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "http://localhost:4445",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "ba3ebb61-5e56-4c2e-8076-6d4ae68cda99",
+    "name": "Apache JMeter REST Results API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "REST API for Apache JMeter test control and monitoring. Provides endpoints for starting, stopping, and monitoring load tests remotely, and for accessing test results.\n\nContact Support:\n Email: dev@jmeter.apache.org",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,181 @@
+{
+  "item": [
+    {
+      "id": "7260819a-a031-4d11-a313-73cbc6243214",
+      "name": "Tests",
+      "description": {
+        "content": "Test execution management",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "3c329e8e-a0a3-4a4e-9a3b-9f3a0b5b2276",
+          "name": "Apache JMeter Start Test",
+          "request": {
+            "name": "Apache JMeter Start Test",
+            "description": {
+              "content": "Start a JMeter load test with a given test plan.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "run"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"testPlan\": \"<string>\",\n  \"properties\": \"<object>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "68ac8b85-c981-4ebc-b9d1-4dff71f2b7e7",
+              "name": "Test started",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "run"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"testPlan\": \"/tests/my-load-test.jmx\",\n  \"properties\": {}\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"testId\": \"test-1234\",\n  \"status\": \"running\",\n  \"startTime\": 1718153645993\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "1a9213da-b018-46e6-b6a8-5c1f25279613",
+          "name": "Apache JMeter Stop Test",
+          "request": {
+            "name": "Apache JMeter Stop Test",
+            "description": {
+              "content": "Stop the currently running JMeter test.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "stop"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "549e7be6-58e3-406a-9fe2-601b6c419bbe",
+              "name": "Test stopped",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "stop"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "http://localhost:4445",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "39e08b6d-57f5-4ec8-b675-840bc4ca400d",
+    "name": "Apache JMeter REST Results Tests API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "REST API for Apache JMeter test control and monitoring. Provides endpoints for starting, stopping, and monitoring load tests remotely, and for accessing test results.\n\nContact Support:\n Email: dev@jmeter.apache.org",
+      "type": "text/plain"
+    }
+  }
+}

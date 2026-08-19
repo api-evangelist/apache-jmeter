@@ -1,0 +1,29 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Apache JMeter REST Results Status API",
+    "version": "5.6.3"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Status",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Apache JMeter Get Status",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:4445/status"
+          },
+          "docs": "Get the current status of a running JMeter test."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

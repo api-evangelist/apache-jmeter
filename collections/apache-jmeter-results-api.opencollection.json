@@ -1,0 +1,37 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Apache JMeter REST Results API",
+    "version": "5.6.3"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Results",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Apache JMeter Get Results",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:4445/results",
+            "params": [
+              {
+                "name": "since",
+                "value": "1718153645993",
+                "type": "query",
+                "description": "Return results since this timestamp"
+              }
+            ]
+          },
+          "docs": "Retrieve test results from the running or completed test."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
