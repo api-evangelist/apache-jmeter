@@ -98,6 +98,8 @@ apis:
   - type: Documentation
     url: https://jmeter.apache.org/usermanual/remote-test.html
 common:
+- type: Website
+  url: https://www.apache.org/
 - type: IssueTracker
   url: https://github.com/apache/jmeter/issues
 - type: Releases
