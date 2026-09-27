@@ -37,7 +37,7 @@ tags:
 - API Testing
 - Java
 - Load Testing
-- Open-Source
+- Open Source
 - Performance Testing
 - Stress Testing
 tags_raw:
@@ -47,6 +47,7 @@ tags_raw:
 - Open Source
 - Performance Testing
 - Stress Testing
+- Open-Source
 created: '2026-03-16'
 modified: '2026-05-19'
 url: https://raw.githubusercontent.com/api-evangelist/apache-jmeter/refs/heads/main/apis.yml
