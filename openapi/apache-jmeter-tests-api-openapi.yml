@@ -68,6 +68,17 @@ paths:
           description: Test stopped
 components:
   schemas:
+    TestRunRequest:
+      type: object
+      description: Request to start a JMeter test
+      properties:
+        testPlan:
+          type: string
+          description: Path to the JMeter test plan file
+          example: /tests/my-load-test.jmx
+        properties:
+          type: object
+          description: JMeter properties to override
     TestRunResponse:
       type: object
       description: Response from starting a test
@@ -83,14 +94,3 @@ components:
           type: integer
           description: Test start timestamp
           example: 1718153645993
-    TestRunRequest:
-      type: object
-      description: Request to start a JMeter test
-      properties:
-        testPlan:
-          type: string
-          description: Path to the JMeter test plan file
-          example: /tests/my-load-test.jmx
-        properties:
-          type: object
-          description: JMeter properties to override
