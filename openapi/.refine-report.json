@@ -1,24 +1,19 @@
 {
   "provider": "apache-jmeter",
   "sources": [
-    "_original/apache-jmeter-rest-api.yaml"
+    "_original/apache-jmeter-openapi.json"
   ],
   "outputs": [
-    "apache-jmeter-results-api-openapi.yml",
-    "apache-jmeter-status-api-openapi.yml",
-    "apache-jmeter-tests-api-openapi.yml"
+    "apache-jmeter-queues-api-openapi.yml",
+    "apache-jmeter-status-api-openapi.yml"
   ],
   "archived": [],
   "errors": [],
   "warnings": [],
   "notes": [
     "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
-    "apache-jmeter-rest-api.yaml: upgraded openapi 3.0.3 -> OpenAPI 3.2.0",
-    "apis.yml register: already-registered"
+    "apache-jmeter-openapi.json: upgraded swagger 2.0 -> OpenAPI 3.2.0",
+    "apis.yml register: written (+1 apis, 3 total)"
   ],
-  "skipped": [
-    "apache-jmeter-results-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "apache-jmeter-status-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "apache-jmeter-tests-api-openapi.yml: previously refined output, superseded by openapi/_original/"
-  ]
+  "skipped": []
 }
