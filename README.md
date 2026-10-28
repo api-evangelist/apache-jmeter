@@ -1,4 +1,4 @@
-# Apache JMeter (apache-jmeter)
+# Apache JMeter
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,141 +64,172 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Apache JMeter is an open-source Java application designed for load testing functional behavior and measuring performance. It supports web applications, REST APIs, databases, LDAP, FTP, and other protocols.
+Apache JMeter is an open-source Java application designed for load testing functional behavior and measuring performance. It supports web applications, REST APIs, databases, LDAP, FTP, and other protocols. Licensed under Apache 2.0 and governed by the Apache Software Foundation.
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/apache-jmeter/refs/heads/main/apis.yml)
+**Areas:** API Testing · Java · Load Testing · Open Source · Performance Testing · Stress Testing
 
-**Run:** [Capabilities Using Naftiko](https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=company-api-evangelist&utm_content=repo)
+## Apache JMeter on APIs.io
 
-## Tags:
+Everything profiled for Apache JMeter is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/apache-jmeter/](https://apis.io/providers/apache-jmeter/)** — or go straight to one of the APIs or properties below.
 
- - API Testing, Java, Load Testing, Open Source, Performance Testing, Stress Testing
+### APIs (4)
 
-## Timestamps
+- [Apache JMeter CLI](https://apis.io/apis/apache-jmeter/cli/) — JMeter command-line interface for running load tests in non-GUI mode for CI/CD integration, including options for test plan execution, result reporting, and…
+- [Apache JMeter Results API](https://apis.io/apis/apache-jmeter/apache-jmeter-results-api/) — Test results access
+- [Apache JMeter Status API](https://apis.io/apis/apache-jmeter/apache-jmeter-status-api/) — Test status and monitoring
+- [Apache JMeter Tests API](https://apis.io/apis/apache-jmeter/apache-jmeter-tests-api/) — Test execution management
 
-- **Created:** 2026-03-16
-- **Modified:** 2026-04-19
+### Published properties
 
-## APIs
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-### Apache JMeter REST API
-The JMeter REST API provides HTTP endpoints for remotely starting, stopping, and monitoring load tests, as well as retrieving test results.
+#### Agentic access (1)
 
-**Human URL:** [https://jmeter.apache.org/usermanual/remote-test.html](https://jmeter.apache.org/usermanual/remote-test.html)
+Which operations an agent can call, which act, and which need a human in the loop.
 
-#### Tags:
+- [Apache Jmeter Agentic Access](https://apis.io/agentic-access/apache-jmeter/apache-jmeter-agentic-access/)
 
- - Performance Testing, REST, Test Control
+#### JSON Schema (4)
 
-#### Properties
+The data models the API reads and writes.
 
-- [Documentation](https://jmeter.apache.org/usermanual/remote-test.html)
-- [OpenAPI](openapi/apache-jmeter-rest-api.yaml)
+- [TestResults](https://apis.io/schemas/apache-jmeter/rest-api-test-results/)
+- [TestRunRequest](https://apis.io/schemas/apache-jmeter/rest-api-test-run-request/)
+- [TestRunResponse](https://apis.io/schemas/apache-jmeter/rest-api-test-run-response/)
+- [TestStatus](https://apis.io/schemas/apache-jmeter/rest-api-test-status/)
 
-### Apache JMeter CLI
-JMeter command-line interface for running load tests in non-GUI mode for CI/CD integration.
+#### JSON Structure (4)
 
-**Human URL:** [https://jmeter.apache.org/usermanual/get-started.html#non_gui](https://jmeter.apache.org/usermanual/get-started.html#non_gui)
+Data models expressed in JSON Structure.
 
-#### Tags:
+- [Rest Api Test Results Structure](https://apis.io/json-structure/apache-jmeter/rest-api-test-results-structure/)
+- [Rest Api Test Run Request Structure](https://apis.io/json-structure/apache-jmeter/rest-api-test-run-request-structure/)
+- [Rest Api Test Run Response Structure](https://apis.io/json-structure/apache-jmeter/rest-api-test-run-response-structure/)
+- [Rest Api Test Status Structure](https://apis.io/json-structure/apache-jmeter/rest-api-test-status-structure/)
 
- - CLI, Performance Testing
+#### JSON-LD (1)
 
-#### Properties
+Linked-data contexts for the provider's vocabulary.
 
-- [Documentation](https://jmeter.apache.org/usermanual/get-started.html#non_gui)
+- [Apache Jmeter Rest Api Context](https://apis.io/jsonld/apache-jmeter/apache-jmeter-rest-api-context/)
 
-## Common Properties
+#### Vocabulary (1)
 
-- [GitHubOrganization](https://github.com/apache)
-- [GitHubRepository](https://github.com/apache/jmeter)
+The provider's domain terms, defined.
+
+- [Apache Jmeter Vocabulary](https://apis.io/vocabularies/apache-jmeter/apache-jmeter-vocabulary/)
+
+#### Examples (4)
+
+Example requests and responses.
+
+- [Rest Api Test Results Example](https://apis.io/examples/apache-jmeter/rest-api-test-results-example/)
+- [Rest Api Test Run Request Example](https://apis.io/examples/apache-jmeter/rest-api-test-run-request-example/)
+- [Rest Api Test Run Response Example](https://apis.io/examples/apache-jmeter/rest-api-test-run-response-example/)
+- [Rest Api Test Status Example](https://apis.io/examples/apache-jmeter/rest-api-test-status-example/)
+
+#### Collections (3)
+
+Postman and Open Collection request collections.
+
+- [Apache JMeter REST Results API](https://apis.io/collections/apache-jmeter/open-apache-jmeter-results-api/)
+- [Apache JMeter REST Results Status API](https://apis.io/collections/apache-jmeter/open-apache-jmeter-status-api/)
+- [Apache JMeter REST Results Tests API](https://apis.io/collections/apache-jmeter/open-apache-jmeter-tests-api/)
+
+#### Governance rules (2)
+
+Spectral rulesets for the provider's contracts.
+
+- [Apache JMeter — jsonschema rules](https://apis.io/rules/apache-jmeter/apache-jmeter-jsonschema-spectral-rules/)
+- [Apache JMeter API Rules](https://apis.io/rules/apache-jmeter/apache-jmeter-spectral-rules/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Apache Jmeter Domain Security](https://apis.io/security/apache-jmeter/apache-jmeter-domain-security/)
+- [Apache Jmeter Vulnerability Disclosure](https://apis.io/security/apache-jmeter/apache-jmeter-vulnerability-disclosure/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Apache Jmeter Plans Pricing](https://apis.io/plans/apache-jmeter/apache-jmeter-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Apache Jmeter Rate Limits](https://apis.io/rate-limits/apache-jmeter/apache-jmeter-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Apache Jmeter Finops](https://apis.io/finops/apache-jmeter/apache-jmeter-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.apache.org/)
 - [Documentation](https://jmeter.apache.org/usermanual/)
-- [GettingStarted](https://jmeter.apache.org/usermanual/get-started.html)
-- [TermsOfService](https://www.apache.org/licenses/LICENSE-2.0)
+- [Getting started](https://jmeter.apache.org/usermanual/get-started.html)
 - [Blog](https://blogs.apache.org/jmeter/)
-- [Versioning](https://jmeter.apache.org/changes.html)
-- [SpectralRules](rules/apache-jmeter-spectral-rules.yml)
-- [Vocabulary](vocabulary/apache-jmeter-vocabulary.yaml)
-- [NaftikoCapability](capabilities/load-test-management.yaml)
+- [Terms of service](https://www.apache.org/licenses/LICENSE-2.0)
+- [GitHub](https://github.com/apache)
 
-## Features
+## API Evangelist rating
 
-| Name | Description |
-|------|-------------|
-| HTTP Load Testing | Test web applications and REST APIs with configurable thread groups and ramp-up. |
-| Protocol Support | Support for HTTP, HTTPS, FTP, JDBC, LDAP, SMTP, TCP, and JMS. |
-| Distributed Testing | Distributed load generation using JMeter remote testing architecture. |
-| Rich Reporting | Built-in listeners and HTML dashboard reporting for test results. |
-| Plugin Ecosystem | Extensive plugin marketplace for additional samplers, listeners, and functions. |
-| CI/CD Integration | Non-GUI mode and REST API for integration with Jenkins, GitHub Actions, and more. |
-| Assertions | Response assertion engine for functional validation during load tests. |
+**Kin Score 38.0** — thin · rubric 0.25.0 · scored 2026-10-23
 
-## Use Cases
+| Facet | Score |
+|---|---|
+| Discoverability | 62.5 |
+| Contract quality | 34.7 |
+| Contract governance | 27.3 |
+| Operational transparency | 36.8 |
+| Developer ergonomics | 21.4 |
+| Access clarity | 18.4 |
 
-| Name | Description |
-|------|-------------|
-| API Performance Testing | Measure REST API response times and throughput under load. |
-| Web Application Load Testing | Simulate concurrent users on web applications to find performance bottlenecks. |
-| CI/CD Performance Gates | Integrate performance testing into CI/CD pipelines with automated pass/fail criteria. |
-| Stress Testing | Determine system breaking points through progressive load increase. |
+**Agent readiness 15.4** — agent-aware
 
-## Integrations
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
 
-| Name | Description |
-|------|-------------|
-| Jenkins | JMeter Performance Plugin for integrating load tests in Jenkins pipelines. |
-| GitHub Actions | Run JMeter tests via CLI in GitHub Actions workflows. |
-| Grafana and InfluxDB | Stream JMeter results to InfluxDB for real-time Grafana dashboards. |
-| Maven | JMeter Maven Plugin for running tests as part of Maven builds. |
+**Regulatory alignment 20.6** — Horizontal (data, software, accessibility, platform)
 
-## Artifacts
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/apache-jmeter/](https://apis.io/providers/apache-jmeter/).
 
-Machine-readable API specifications organized by format.
+## How this profile is made
 
-### OpenAPI
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
 
-- [Apache JMeter REST API](openapi/apache-jmeter-rest-api.yaml)
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Apache JMeter: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
 
-### JSON Schema
+## Open an issue
 
-4 schema files extracted from the REST API OpenAPI specification.
-
-### JSON Structure
-
-4 JSON Structure files converted from JSON Schema files.
-
-### JSON-LD
-
-- [Apache JMeter REST API Context](json-ld/apache-jmeter-rest-api-context.jsonld)
-
-### Examples
-
-4 example JSON files generated from JSON Schema definitions.
-
-## Capabilities
-
-Naftiko capabilities organized as shared per-API definitions composed into customer-facing workflows.
-
-### Shared Per-API Definitions
-
-- [Apache JMeter REST API](capabilities/shared/jmeter-rest-api.yaml) — 3 operations for test execution and result retrieval
-
-### Workflow Capabilities
-
-| Workflow | APIs Combined | Tools | Persona |
-|----------|--------------|-------|---------|
-| [Apache JMeter Load Test Management](capabilities/load-test-management.yaml) | Apache JMeter REST API | 4 | QA Engineer, Performance Engineer |
-
-## Vocabulary
-
-- [Apache JMeter Vocabulary](vocabulary/apache-jmeter-vocabulary.yaml) — Unified taxonomy mapping 2 resources, 4 actions, 1 workflow, and 2 personas
-
-## Rules
-
-- [Apache JMeter Spectral Rules](rules/apache-jmeter-spectral-rules.yml) — 12 rules across 7 categories enforcing Apache JMeter REST API conventions
-
-## Maintainers
-
-**FN:** Kin Lane
-
-**Email:** info@apievangelist.com
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/apache-jmeter/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
