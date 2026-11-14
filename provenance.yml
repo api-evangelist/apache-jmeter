@@ -5,6 +5,12 @@ artifacts:
   agentic-access/apache-jmeter-agentic-access.yml:
     method: generated
     evidence: declared in the artifact
+  certification/observations-2026-11-11.jsonl:
+    method: unknown
+    evidence: no authorship recorded
+  certification/status.yml:
+    method: unknown
+    evidence: no authorship recorded
   collections/apache-jmeter-results-api.opencollection.json:
     method: derived
     evidence: openapi/apache-jmeter-results-api
@@ -23,6 +29,9 @@ artifacts:
   collections/apache-jmeter-tests-api.postman_collection.json:
     method: derived
     evidence: openapi/apache-jmeter-tests-api
+  data-license/apache-jmeter-data-license.yml:
+    method: harvested
+    evidence: declared in the artifact
   examples/rest-api-test-results-example.json:
     method: unknown
     evidence: no authorship recorded
@@ -77,7 +86,7 @@ artifacts:
   kin/checks-2026-10-23T222754.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
-  kin/checks-2026-11-02T082323.yml:
+  kin/checks-2026-11-06T143934.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
   kin/score-2026-09-23T000603.yml:
@@ -146,6 +155,9 @@ artifacts:
   kin/score-2026-11-02T082323.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-11-06T143934.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
   openapi/_original/apache-jmeter-rest-api.yaml:
     method: harvested
     evidence: found in openapi/_original/; the fetch URL and bytes were not recorded, so byte-identity
@@ -179,6 +191,9 @@ artifacts:
     evidence: declared in the artifact
   sla/apache-jmeter-sla.yml:
     method: generated
+    evidence: declared in the artifact
+  terms/apache-jmeter-terms-of-service.yml:
+    method: harvested
     evidence: declared in the artifact
   vocabulary/apache-jmeter-vocabulary.yaml:
     method: unknown
